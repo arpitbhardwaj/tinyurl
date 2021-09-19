@@ -6,19 +6,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * @author Arpit Bhardwaj
  *
- * https://www.tutorialspoint.com/jackson_annotations/jackson_annotations_jsoncreator.htm
- * mapped to https://tinyurl.com/y76mn66q
- * Long Url=https://www.tutorialspoint.com/jackson_annotations/jackson_annotations_jsoncreator.htm
- * Local Url=https://tinyurl.com
- * Unique Id = y76mn66q
- *
+ * Local Url	=http://localhost:8080/tinyurl
+ * Long Url		=https://www.linkedin.com/in/arpitbhardwaj09/
+ * Short Url	=http://localhost:8080/tinyurl/xxxx
+ * Unique Id = xxxx
  */
 
 @SpringBootApplication
 public class TinyurlApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(TinyurlApplication.class, args);
 	}
-
 }

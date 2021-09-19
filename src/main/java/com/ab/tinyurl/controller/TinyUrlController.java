@@ -27,9 +27,9 @@ public class TinyUrlController {
         return tinyUrl;
     }
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/tinyurl/{id}", method = RequestMethod.GET)
     public RedirectView getTinyUrl(@PathVariable String id, HttpServletRequest request, HttpServletResponse response){
-        String longUrl = service.toRedirectUrl(id);
+        String longUrl = service.toRedirectUrl(id);;
         RedirectView view = new RedirectView();
         view.setUrl(longUrl);
         return view;

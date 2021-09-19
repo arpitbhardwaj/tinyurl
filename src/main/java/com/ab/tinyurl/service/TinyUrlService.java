@@ -18,7 +18,7 @@ public class TinyUrlService {
         long id = repository.getIncrementId();
         String uniqueId = Converter.getInstance().generateUniqueId(id);
         repository.save(uniqueId,longUrl);
-        return localUrl + uniqueId;
+        return localUrl + "/" + uniqueId;
     }
 
     public String toRedirectUrl(String id){

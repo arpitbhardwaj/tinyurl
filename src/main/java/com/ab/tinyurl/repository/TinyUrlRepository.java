@@ -16,7 +16,7 @@ public class TinyUrlRepository {
     public TinyUrlRepository() {
         this.jedis = new Jedis();
         this.idKey = "id";
-        this.urlKey = "url:";
+        this.urlKey = "url";
     }
 
     public long getIncrementId() {
@@ -29,7 +29,7 @@ public class TinyUrlRepository {
     }
 
     public String getLongUrl(String uniqueId) {
-        String url = jedis.hget(urlKey, urlKey + uniqueId);
+        String url = jedis.hget(urlKey, uniqueId);
         if (url == null){
             throw new IllegalArgumentException("URL at key : "+ uniqueId + " doesn't exist");
         }else {
